@@ -10,6 +10,7 @@ st.title('Builders In Your Locality: Hyderabad')
 
 st.markdown("""
 This app displays list of builders in your locality as word cloud.
+Bigger the font, more the no. of listings.
 * **Data source:** Magicbricks
 """)
 
