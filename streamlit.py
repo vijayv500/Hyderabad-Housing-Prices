@@ -10,7 +10,7 @@ st.title('Builders In Your Locality: Hyderabad')
 
 st.markdown("""
 This app displays list of builders in your locality as word cloud.
-Bigger the font, more the no. of listings.
+* Bigger the font, more the number of listings.
 * **Data source:** Magicbricks
 """)
 
@@ -39,5 +39,5 @@ plt.show()
 
 
 
-st.header('Display Companies in Selected locality')
+st.header('Builders in your selected locality:')
 st.pyplot()
