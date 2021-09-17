@@ -17,14 +17,15 @@ st.sidebar.header('Select Your Locality')
 
 
 df = pd.read_csv('merge_first_second_raw_10907x23.csv')
+df = df.dropna(subset=['builder'])
 df['locality'] = df['locality'].astype(str)
-loc_list = list(df['locality'].unique())[0:10]
+df['builder'] = df['builder'].astype(str)
+loc_list = list(df['locality'].unique())
 
 
 chosen_loc = st.sidebar.selectbox('Locality',loc_list)
 
-df_chosen_loc = df 
-df_chosen_loc['builder'] = df_chosen_loc['builder'].astype(str)
+df_chosen_loc = df.loc[(df['locality']==chosen_loc)]
 builder_list  = df_chosen_loc['builder'].values.tolist()
 
 count = Counter(builder_list)
