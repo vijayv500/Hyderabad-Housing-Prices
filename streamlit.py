@@ -6,7 +6,7 @@ from collections import Counter
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.title('Builders In Your Locality: Hyderabad')
+st.title('Find Out Builders In Your Locality: Hyderabad')
 
 st.markdown("""
 This app displays list of builders in your locality as word cloud.
@@ -43,7 +43,16 @@ plt.show()
 st.header('Builders in '+ chosen_loc + ":")
 st.pyplot()
 st.markdown('''
-* [Github repo](https://github.com/vijayv500/Hyderabad-Housing-Prices)
-* [Twitter](https://twitter.com/vijayv500)
-* [Medium Blog](https://vijayv500.medium.com)
+* [Github Repo](https://github.com/vijayv500/Hyderabad-Housing-Prices) [Twitter](https://twitter.com/vijayv500) [Medium Blog](https://vijayv500.medium.com)
 	''')
+builder_list = df['builder'].values.tolist()
+count = Counter(builder_list)
+wordcloud = WordCloud(width = 1600, height = 800,background_color='white')\
+.generate_from_frequencies(count)
+plt.figure(figsize=(40,30))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.show() 
+
+st.header('List of builders in Hyderabad (all localities)')
+st.pyplot()
