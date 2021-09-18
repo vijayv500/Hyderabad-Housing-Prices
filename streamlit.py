@@ -10,8 +10,8 @@ st.title('Builders In Your Locality: Hyderabad')
 
 st.markdown("""
 This app displays list of builders in your locality as word cloud.
-* Bigger the font, more the number of listings.
-* **Data source:** Magicbricks
+* Bigger the font in the below image, more the number of listings of that particular builder on Magicbricks.com.
+* Listings correspond to "BUYING" flats, villas, Residential Houses  etc.
 """)
 
 st.sidebar.header('Select Your Locality')
@@ -41,3 +41,8 @@ plt.show()
 
 st.header('Builders in your selected locality:')
 st.pyplot()
+st.markdown('''
+* [Github repo](https://github.com/vijayv500/Hyderabad-Housing-Prices)
+* [Twitter](https://twitter.com/vijayv500)
+* [Medium Blog](https://vijayv500.medium.com)
+	''')
