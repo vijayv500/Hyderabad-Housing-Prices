@@ -43,7 +43,7 @@ plt.show()
 st.header('Builders in '+ chosen_loc + ":")
 st.pyplot()
 st.markdown('''
-* [Github Repo](https://github.com/vijayv500/Hyderabad-Housing-Prices) [Twitter](https://twitter.com/vijayv500) [Medium Blog](https://vijayv500.medium.com)
+* [Github Repo](https://github.com/vijayv500/Hyderabad-Housing-Prices), [Twitter](https://twitter.com/vijayv500), [Medium Blog](https://vijayv500.medium.com).
 	''')
 builder_list = df['builder'].values.tolist()
 count = Counter(builder_list)
@@ -56,3 +56,12 @@ plt.show()
 
 st.header('List of builders in Hyderabad (all localities)')
 st.pyplot()
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
